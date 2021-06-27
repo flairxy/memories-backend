@@ -21,6 +21,9 @@ app.unsubscribe(express.urlencoded({
 app.use(cors());
 
 app.use('/posts', postRoutes);
+app.get('/', (req, res) => {
+  res.send('Hello to memories API');
+})
 
 const CONNECTION_URL = process.env.CONNECTION_URL;
 
